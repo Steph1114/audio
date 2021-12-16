@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Player Audio</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css">
+
+    <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+
+<body>
+    <!-- First screen -->
+    <div class="audio-player-screen p-relative br-30 bg-size">
+        <div class="player w-420 h-600 br-30 bg-size">
+            <div class="song-details d-flex-justify-align">
+                <div class="p-relative h-360">
+                    <div class="song-album-photo w-380 h-360 br-30 bg-size"></div>
+                    <div class="content">
+                        <canvas id="canvas" class="w-380 h-360 br-30"></canvas>
+                    </div>
+                </div>
+                <div class="detail-slider d-flex-justify-align">
+                    <div class="song-name font-size-weight">Song's title</div>
+                    <div class="song-artist font-size-weight">Name of the artist</div>
+                    <div class="album-name font-size-weight">Title of the Album</div>
+                </div>
+            </div>
+            <div class="slider_container d-flex-justify-align">
+
+                <span class="lowest-vol">vol 0</span>
+                <input type="range" min="0" max="100" value="10" class="volume-slider">
+                <span class="highest-vol">32</span>
+            </div>
+
+            <div class="buttons">
+                <div class="preview-btn">
+                    <i class="fa fa-step-backward fa-2x"></i>
+                </div>
+                <div class="middleBtn">
+                    <div class="playpause-btn">
+                        <i class="fas fa-play fa-2x"></i>
+                    </div>
+                    <div class="stop-btn">
+                        <i class="fas fa-stop fa-2x"></i>
+                    </div>
+                </div>
+                <div class="forward-btn">
+                    <i class="fa fa-step-forward fa-2x"></i>
+                </div>
+            </div>
+            <div class="slider_container d-flex-justify-align">
+                <div class="current-time">00:00</div>
+                <input type="range" min="1" max="100" value="0" class="duration-slider">
+                <div class="total-duration">00:00</div>
+            </div>
+        </div>
+        <!-- second screen : playlist -->
+        <div class="another-player w-420 h-600 br-30 bg-size">
+            <div class="playlist-title d-flex-justify-align">
+                <p>Liste de lecture</p>
+            </div>
+
+            <ul class="d-flex-justify-align"></ul>
+        </div>
+
+    </div>
+
+</body>
+
+<script src="main.js"></script>
+
+</html>
